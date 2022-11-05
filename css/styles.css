@@ -1,0 +1,140 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background: var(--VeryLightGray);
+}
+
+.main-content {
+    display: block;
+    text-align: center;
+    max-width: 500px;
+}
+.main-content h1 {
+    font-weight: 200;
+    color: var(--VeryDarkBlue);
+}
+
+.main-content p {
+    color: var(--GrayishBlue);
+    margin: 20px;
+}
+
+
+.main-content span {
+    font-weight: 600;
+}
+
+.card {
+    background: white;
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px var(--GrayishBlue);
+}
+
+.card-content {
+    margin: 20px;
+}
+
+
+.card h2 {
+    color: var(--VeryDarkBlue);
+}
+
+.card p {
+    color: var(--GrayishBlue);
+}
+
+.card-image {
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+}
+
+#line1 {
+    background: var(--Cyan);
+    height: 5px;
+}
+
+#line2 {
+    background: var(--Red);
+    height: 5px;
+}
+
+#line3 {
+    background: var(--Orange);
+    height: 5px;
+}
+
+#line4 {
+    background: var(--Blue);
+    height: 5px;
+}
+
+.content {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 1.6em;
+    }
+    
+    .main-content p {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .cards {
+        display: flex;
+        align-items: center;
+    }
+
+    .cards-center {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .card {
+        transition: 300ms;
+        cursor: pointer;
+        margin: 20px;
+    }
+
+    .card:hover {
+        scale: 1.1;
+    }
+}
